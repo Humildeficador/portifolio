@@ -1,17 +1,18 @@
 import { cva, cx, type VariantProps } from 'class-variance-authority'
 import type { ComponentProps, FC } from 'react'
 
-export const iconVariants = cva('', {
+export const iconVariants = cva('shrink-0 pointer-events-none', {
 	variants: {
 		size: {
-			sm: 'size-4',
-			md: 'size-6',
-			lg: 'size-8',
+			sm: 'size-2 md:size-4',
+			md: 'size-4 md:size-6',
+			lg: 'size-6 md:size-8',
 		},
 		color: {
 			primary: 'text-gray-1000',
 			secondary: 'text-gray-400',
 			accent: 'text-mint-400',
+			currentColor: 'text-[currentColor]'
 		},
 		clickable: {
 			true: 'cursor-pointer hover:opacity-80 transition-opacity',
