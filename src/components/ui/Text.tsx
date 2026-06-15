@@ -4,9 +4,12 @@ import { createElement, type HTMLAttributes } from 'react'
 export const textVariants = cva(``, {
 	variants: {
 		size: {
+			xs: 'text-[10px]',
 			sm: 'text-sm',
 			md: 'text-base',
 			lg: 'text-lg',
+			xl: 'text-xl',
+			'2xl': 'text-2xl',
 		},
 		intent: {
 			primary: 'text-gray-1000',
