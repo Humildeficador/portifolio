@@ -1,6 +1,8 @@
 import { ProjectCard } from '~/components/ui/ProjectCard'
+import { SideSheet } from '~/components/ui/SideSheet'
 import { Text } from '~/components/ui/Text'
 import { projectsMock } from '~/utils/projectsMock'
+import * as Dialog from '@radix-ui/react-dialog'
 
 export function Projects() {
 	return (
@@ -15,7 +17,11 @@ export function Projects() {
 			</div>
 			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
 				{projectsMock.map((project) => (
-					<ProjectCard key={`${project.id}`} project={project} />
+					<SideSheet>
+						<Dialog.Trigger asChild>
+							<ProjectCard key={`${project.id}`} project={project} />
+						</Dialog.Trigger >
+					</SideSheet >
 				))}
 			</div>
 		</div>

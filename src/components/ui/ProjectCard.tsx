@@ -1,12 +1,12 @@
-import { cva, type VariantProps } from 'class-variance-authority'
-import { useRef } from 'react'
+import { cva, cx, type VariantProps } from 'class-variance-authority'
+import { forwardRef, useRef } from 'react'
 import { Badge } from '~/components/ui/Badge'
 import { Text } from '~/components/ui/Text'
 import { Video } from '~/components/ui/Video'
 import type { Project } from '~/utils/projectsMock'
 
 export const projectCardVariants = cva(
-	'relative overflow-hidden group rounded-lg border bg-gray-950 p-6 flex flex-col justify-between transition-all duration-300 cursor-pointer hover:-translate-y-1',
+	'w-full text-left relative overflow-hidden group rounded-lg border bg-gray-950 p-6 flex flex-col justify-between transition-all duration-300 cursor-pointer hover:-translate-y-1',
 	{
 		variants: {
 			isFeatured: {
@@ -23,11 +23,13 @@ export const projectCardVariants = cva(
 	},
 )
 
-interface ProjectCardProp extends VariantProps<typeof projectCardVariants> {
+interface ProjectCardProp extends
+	React.ButtonHTMLAttributes<HTMLButtonElement>,
+	VariantProps<typeof projectCardVariants> {
 	project: Project
 }
 
-export function ProjectCard({ project }: ProjectCardProp) {
+export const ProjectCard = forwardRef<HTMLButtonElement, ProjectCardProp>(({ project, className, ...props }, ref) => {
 	const { title, description, tags, isFeatured, videoUrl } = project
 
 	const videoRef = useRef<HTMLVideoElement>(null)
@@ -45,12 +47,13 @@ export function ProjectCard({ project }: ProjectCardProp) {
 
 	return (
 		<button
+			ref={ref}
 			type="button"
-			className={`w-full text-left ${projectCardVariants({ isFeatured })}`}
-			onMouseEnter={handleMouseEnter}
+			className={cx(projectCardVariants({ isFeatured: project.isFeatured }), className)} onMouseEnter={handleMouseEnter}
 			onMouseLeave={handleMouseLeave}
 			onFocus={handleMouseEnter}
 			onBlur={handleMouseLeave}
+			{...props}
 		>
 			{videoUrl && (
 				<>
@@ -96,4 +99,6 @@ export function ProjectCard({ project }: ProjectCardProp) {
 			</div>
 		</button>
 	)
-}
+})
+
+ProjectCard.displayName = 'ProjectCard'
