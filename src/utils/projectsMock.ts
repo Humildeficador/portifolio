@@ -5,6 +5,9 @@ export interface Project {
   tags: string[]
   videoUrl?: string
   isFeatured?: boolean
+  repoUrl: string
+  liveDemoUrl?: string
+  gifUrl?: string
 }
 
 export const projectsMock: Project[] = [
@@ -15,6 +18,9 @@ export const projectsMock: Project[] = [
     tags: ['TypeScript', 'Node.js', 'Automation'],
     isFeatured: true,
     videoUrl: 'https://interactive-examples.mdn.mozilla.net/media/cc0-videos/friday.mp4',
+    repoUrl: 'https://github.com/Humildeficador/portfolio',
+    liveDemoUrl: 'https://github.com/Humildeficador/portfolio',
+    gifUrl: 'https://media2.giphy.com/media/13HgwGsXF0aiGY/giphy.gif'
   },
   {
     id: 'humildas-league',
@@ -22,6 +28,7 @@ export const projectsMock: Project[] = [
     description: 'Template minimalista e automatizador de interface utilizando Electron, Vite e React para otimização de rotinas.',
     tags: ['Electron', 'React', 'TypeScript', 'Tailwind'],
     videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
+    repoUrl: 'https://github.com/Humildeficador/portfolio'
   },
   {
     id: 'fastify-prisma-gateway',
@@ -29,6 +36,7 @@ export const projectsMock: Project[] = [
     description: 'API escalável para gerenciamento de logística e consultas rápidas, estruturada com banco de dados relacional e paginação eficiente.',
     tags: ['Fastify', 'Prisma', 'PostgreSQL', 'Backend'],
     videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
+    repoUrl: 'https://github.com/Humildeficador/portfolio'
   },
   {
     id: 'hygia-intranet-automation',
@@ -36,5 +44,6 @@ export const projectsMock: Project[] = [
     description: 'Extensão de navegador e scripts customizados para otimização de busca, preenchimento de dados e rastreamento de prontuários em sistemas hospitalares.',
     tags: ['JavaScript', 'Extensions', 'Web Scraping', 'UI/UX'],
     videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
+    repoUrl: 'https://github.com/Humildeficador/portfolio'
   }
 ]

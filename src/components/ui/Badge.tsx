@@ -9,6 +9,9 @@ export const badgeVariants = cva(
 				default: 'bg-slate-800/40 text-slate-400 border-slate-700/30',
 			},
 		},
+		defaultVariants: {
+			intent: 'default',
+		}
 	},
 )
 

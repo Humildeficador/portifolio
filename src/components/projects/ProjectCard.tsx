@@ -92,7 +92,7 @@ export const ProjectCard = forwardRef<HTMLButtonElement, ProjectCardProp>(({ pro
 			</div>
 			<div className="relative z-10 flex flex-wrap gap-2 mt-6">
 				{tags.map((tag) => (
-					<Badge key={tag} intent="default">
+					<Badge key={tag}>
 						{tag}
 					</Badge>
 				))}
