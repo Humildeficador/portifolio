@@ -9,7 +9,7 @@ export const navLinkVariants = cva(
 	{
 		variants: {
 			active: {
-				true: 'font-medium text-mint-400',
+				true: 'font-medium text-teal-300',
 				false: 'text-gray-400 hover:text-gray-1000',
 			},
 		},

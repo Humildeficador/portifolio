@@ -5,7 +5,7 @@ import { Projects } from '~/pages/Projects'
 
 const Home = () => (
 	<div>
-		<h1 className="text-2xl font-mono text-mint-400 mb-4">~/home</h1>
+		<h1 className="text-2xl font-mono text-teal-300 mb-4">~/home</h1>
 		<Text>
 			Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, et?
 		</Text>
@@ -13,12 +13,12 @@ const Home = () => (
 )
 const Skills = () => (
 	<div>
-		<h1 className="text-2xl font-mono text-mint-400">./skills</h1>
+		<h1 className="text-2xl font-mono text-teal-300">./skills</h1>
 	</div>
 )
 const Contact = () => (
 	<div>
-		<h1 className="text-2xl font-mono text-mint-400">bash contact.sh</h1>
+		<h1 className="text-2xl font-mono text-teal-300">bash contact.sh</h1>
 	</div>
 )
 

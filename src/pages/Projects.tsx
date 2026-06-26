@@ -1,7 +1,7 @@
 import { ProjectCard } from '~/components/projects/ProjectCard'
+import { ProjectDetailsSheet } from '~/components/projects/ProjectDetailsSheet'
 import { Text } from '~/components/ui/Text'
 import { projectsMock } from '~/utils/projectsMock'
-import { ProjectDetailsSheet } from '~/components/projects/ProjectDetailsSheet'
 
 export function Projects() {
 	return (
@@ -17,8 +17,8 @@ export function Projects() {
 			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
 				{projectsMock.map((project) => (
 					<ProjectDetailsSheet key={project.id} project={project}>
-							<ProjectCard project={project} />
-					</ProjectDetailsSheet >
+						<ProjectCard project={project} />
+					</ProjectDetailsSheet>
 				))}
 			</div>
 		</div>

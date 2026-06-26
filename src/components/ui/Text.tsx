@@ -14,7 +14,7 @@ export const textVariants = cva(``, {
 		intent: {
 			primary: 'text-gray-1000',
 			secondary: 'text-gray-400',
-			accent: 'text-mint-400',
+			accent: 'text-teal-300',
 		},
 	},
 	defaultVariants: {

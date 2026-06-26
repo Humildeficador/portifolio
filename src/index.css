@@ -19,7 +19,7 @@
 
 @layer base {
 	body {
-		@apply font-mono bg-gray-950 text-gray-1000 transition-colors duration-300;
+		@apply font-mono bg-slate-950 text-gray-1000 transition-colors duration-300;
 
 		background-image: 
       linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
