@@ -7,7 +7,7 @@ import { navItems } from '~/utils/navItems'
 import { socialLinks } from '~/utils/socialLinks'
 
 export const navBarVariants = cva(
-	'sticky bg-gray-950 top-0 left-0 h-screen w-64 flex flex-col border-r border-slate-800 p-6',
+	'sticky bg-transparent top-0 left-0 h-screen w-64 flex flex-col border-r border-slate-800 p-6',
 )
 
 interface NavBarProps
